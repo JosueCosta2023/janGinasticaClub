@@ -1,0 +1,18 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", serif;
+    font-optical-sizing: auto;
+    color: var(--secundary-color);
+}
+
+buttom{
+    cursor: pointer;
+}
+
+ul, li, a{
+    list-style: none;
+    text-decoration: none;
+    color: var(--secundary-color);
+}

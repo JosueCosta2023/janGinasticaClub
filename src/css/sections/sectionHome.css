@@ -1,0 +1,113 @@
+.content.home {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 60px;
+  position: sticky;
+  
+}
+
+.content.home::before{
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-image: 
+        linear-gradient(to bottom, transparent, var(--primary-color)), 
+        url('/public/images/banner.webp');
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  bottom: 0;
+  z-index: -1;
+  opacity: 0.2;
+}
+.content.home > .welcome {
+  padding: 80px 0px;
+  text-align: center;
+  width: 500px;
+  margin: 0 auto;
+  color: var(--secundary-color);
+}
+.content.home > .welcome > h1 {
+  font-size: 40px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin-bottom: 24px;
+}
+.content.home > .welcome > p {
+  font-size: 16px;
+  color: var(--secundary-color);
+}
+
+.content.home > .studant-reference {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+.content.home > .studant-reference > .student-card-image > img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+
+.content.home > .studant-reference > .student-card-info {
+    display: flex;
+    width: 80%;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+   .content.home > .studant-reference > .student-card-info > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 12px;
+    letter-spacing: 2px; 
+  }
+  
+   .content.home > .studant-reference > .student-card-info > div > h2 {
+    font-size: var(--fontSizeLarge);
+    font-weight: bold;
+  }
+   .content.home > .studant-reference > .student-card-info > div > p {
+    font-size: var(--fontSizeDefault);
+  }
+   .content.home > .studant-reference > .student-card-info > div > div {
+    display: flex;
+    gap: 10px;
+    flex-direction: row;
+  }
+  
+   .content.home > .studant-reference > .student-card-info > div > div > span{
+    background: var(--secundary-color);
+    padding: 5px 15px;
+    border-radius: 5px;
+    display: flex;
+    color: var(--primary-color);
+    font-weight: bold;
+  }
+  
+   .content.home > .studant-reference > .student-card-info > .btn{
+    width: 30%;
+  }
+  
+   .content.home > .studant-reference > .student-card-info > .btn >  button{
+    padding: 20px 10px;
+    background-color: var(--secundary-color);
+    color: var(--primary-color);
+    border-radius: 8px;
+    font-size: var(--fontSizeDefault);
+    font-weight: bold;
+  }
+  
+   .content.home > .studant-reference > .student-card-info > .btn >  button:hover{
+    background-color: var(--primary-color);
+    color: var(--secundary-color);
+    border: 2px solid var(--secundary-color);
+  }

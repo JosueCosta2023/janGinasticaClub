@@ -1,0 +1,28 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+body {
+  background-color: var(--primary-color);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.containerBlock {
+  display: flex;
+  width: 100%;
+  margin: 0 auto;
+  max-width: 1920px;
+  flex-direction: column;
+  gap: 20px;
+}
+
+
+.containerBlock > .content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+
