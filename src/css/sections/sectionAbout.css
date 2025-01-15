@@ -1,0 +1,88 @@
+.content.about{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 120px;
+}
+
+.content.about > .about-image{
+    min-width: 320px;
+    min-height: 320px;
+    width: 500px;
+    height: 500px;
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 100%;
+    border: 15px;
+    box-shadow: 1px 4px 7px 4px rgba(0,0,0,0.26);
+-webkit-box-shadow: 1px 4px 7px 4px rgba(0,0,0,0.26);
+-moz-box-shadow: 1px 4px 7px 4px rgba(0,0,0,0.26);
+}
+.content.about > .about-image > img{
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+    border-radius: 100%;
+}
+
+.content.about > .about-info{
+    width: 48%;
+    min-width: 420px;
+    max-width: 100%;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+.content.about > .about-info >  .about-info-title{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.content.about > .about-info >  .about-info-title > h2{
+    font-size: var(--fontSizeTitles);
+}
+.content.about > .about-info >  .about-info-title > p{
+    font-size: var(--fontSizeDefault);
+}
+
+.content.about > .about-info > .about-card-group{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.content.about > .about-info > .about-card-group .about-card-item{
+    width: 100%;
+    min-width: 320px;
+    padding: 16px;
+    display: flex;   
+    gap: 16px;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    border-radius: 6px;
+}
+
+.content.about > .about-info > .about-card-group .about-card-item > img{
+    width: 100px;
+    height: 100px;
+}
+
+.content.about > .about-info > .about-card-group .about-card-item > .card-item{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.content.about > .about-info > .about-card-group .about-card-item > .card-item h3{
+    font-size: var(--fontSizeLarge);
+}
+.content.about > .about-info > .about-card-group .about-card-item > .card-item p{
+    font-size: var(--fontSizeDefault);
+}
+

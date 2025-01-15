@@ -1,6 +1,7 @@
 :root{
     --primary-color: #E3E4DF;
     --secundary-color:#091A22;
+    --secundary-colorLight:#091a224b;
     --linear-color:linear-gradient(90deg, rgba(0,162,71,1) 0%, rgba(244,213,0,1) 35%, rgba(1,173,222,1) 100%);
 
     

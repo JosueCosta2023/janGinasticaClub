@@ -1,10 +1,11 @@
 .content.home {
   width: 100%;
+  height: 80vh;
   display: flex;
   align-items: center;
   flex-direction: column;
   gap: 60px;
-  position: sticky;
+  position: relative;
   
 }
 
@@ -26,12 +27,12 @@
 .content.home > .welcome {
   padding: 80px 0px;
   text-align: center;
-  width: 500px;
+  width: 1000px;
   margin: 0 auto;
   color: var(--secundary-color);
 }
 .content.home > .welcome > h1 {
-  font-size: 40px;
+  font-size: calc(var(--fontSizeTitles) + 2rem);
   font-weight: bold;
   letter-spacing: 2px;
   margin-bottom: 24px;
@@ -43,9 +44,14 @@
 
 .content.home > .studant-reference {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  gap: 20px;
   width: 100%;
+  padding: 30px;
+  border-radius: 8px;
+  border: 1px solid var(--secundary-colorLight);
 }
+
 .content.home > .studant-reference > .student-card-image > img {
   width: 100px;
   height: 100px;
@@ -93,12 +99,12 @@
     font-weight: bold;
   }
   
-   .content.home > .studant-reference > .student-card-info > .btn{
-    width: 30%;
-  }
   
    .content.home > .studant-reference > .student-card-info > .btn >  button{
-    padding: 20px 10px;
+    width: 320px;
+    height: 60px;
+    list-style: 60px;
+    cursor: pointer;
     background-color: var(--secundary-color);
     color: var(--primary-color);
     border-radius: 8px;
