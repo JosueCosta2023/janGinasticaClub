@@ -8,7 +8,17 @@ window.addEventListener("load", () => {
         contentMain.forEach((e) => {
             e.style.display = "flex"
         })
-    }, 1000)
+    }, 3000)
+
+    setTimeout(() => {
+        AOS.init({
+            duration: 400,
+            offset: 120,
+            easing: "ease",
+        });
+    }, 3500)
+
+    AOS.refresh()
 })
 
 
