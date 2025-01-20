@@ -1,4 +1,3 @@
-
 window.addEventListener("load", () => {
     const spinner = document.querySelector(".spinner")
     const contentMain = document.querySelectorAll(".containerBlock")
@@ -9,5 +8,7 @@ window.addEventListener("load", () => {
         contentMain.forEach((e) => {
             e.style.display = "flex"
         })
-    }, 5000)
+    }, 1000)
 })
+
+
