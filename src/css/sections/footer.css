@@ -1,0 +1,20 @@
+.content > .content-nav{
+    width: 100%;
+    display: flex;
+    padding: 60px 0px;
+}
+
+.content > .content-nav > ul{
+    width: 649px;
+    height: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    gap: 60px;
+    align-items: center;
+    justify-content:center ;
+}
+
+.content > .content-nav > ul > li{
+    font-size: var(--fontSizeLarge);
+}

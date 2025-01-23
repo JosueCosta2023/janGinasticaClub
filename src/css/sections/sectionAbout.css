@@ -40,14 +40,14 @@
     display: grid; /* Corrige 'grip' para 'grid' */
     grid-template-columns: repeat(2, 1fr); /* Define duas colunas iguais */
     gap: 40px; /* Espaçamento entre os itens */
-    width: 100%; /* Mantém a largura total */
+    width: 90%; /* Mantém a largura total */
     justify-content: center; /* Alinha o conteúdo horizontalmente */
     align-items: center; /* Alinha o conteúdo verticalmente */
 }
 
 .content.about > .about-info > .about-card-group .about-card-item {
   width: 100%;
-  min-width: 320px;
+  min-width: 300px;
   padding: 16px;
   display: flex;
   gap: 16px;
@@ -85,4 +85,20 @@
   > .card-item
   p {
   font-size: var(--fontSizeDefault);
+}
+
+@media(max-width: 1100px){
+  .content.about > .about-info > .about-card-group{
+    grid-template-columns: repeat(1, 1fr); 
+  }
+}
+
+@media(max-width: 320px){
+  .content.about > .about-info > .about-card-group .about-card-item{
+    flex-direction: column;
+  }
+
+  .content.about > .about-info{
+    min-width: 100%;
+  }
 }
