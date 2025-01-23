@@ -3,6 +3,7 @@
   --special-color: #d4ae5b;
   --secundary-color: #091a22;
   --secundary-colorLight: #091a224b;
+  --secundary-colorLightPlus: #091a2219;
   --linear-color: linear-gradient(
     90deg,
     rgba(0, 162, 71, 1) 0%,
@@ -10,7 +11,7 @@
     rgba(1, 173, 222, 1) 100%
   );
 
-  --fontSizeMini: 12px;
+  --fontSizeMini: 14px;
   --fontSizeDefault: 16px;
   --fontSizeLarge: 20px;
   --fontSizeExtraLarge: 24px;
