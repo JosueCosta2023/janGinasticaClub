@@ -49,3 +49,37 @@ html, body {
     60%{background-position:0%  50%, 50% 100%,100%   0%}
     80%{background-position:0%  50%, 50%  50%,100% 100%}
 }
+
+/* Load button */
+
+.load{
+  border: 3px solid #f3f3f3;
+  border-top: 3px solid var(--secundary-color);
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  animation: spin 1s linear infinite;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+
+button.loading .load {
+  display: block;
+}
+
+button.loading span {
+  visibility: hidden;
+}
+
+@keyframes spin {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+

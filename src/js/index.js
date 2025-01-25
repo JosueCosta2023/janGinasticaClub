@@ -33,20 +33,33 @@ window.addEventListener("load", () => {
         menu.classList.toggle('open'); // Alterna a classe do menu
     });
 
-    enviar.addEventListener("click", () => {
+    enviar.addEventListener("click", (e) => {
+
+        e.preventDefault()
 
         const nome = frm.inName.value
         const email = frm.inEmail.value
 
-        if (nome || email) {
-            // Exibir a mensagem
-            mensagemEmail.style.display = "block";
+        
+        enviar.classList.toggle("loading");
+        setTimeout(() => {
+            
 
-            // Após 7 segundos, esconder a mensagem
-            setTimeout(() => {
-                mensagemEmail.style.display = "none";
-            }, 3000); // 7000 milissegundos = 7 segundos 
-        }
+            if (nome || email) {
+                // Exibir a mensagem
+                enviar.classList.remove("loading")
+                mensagemEmail.style.display = "flex";
+                // Após 7 segundos, esconder a mensagem
+                setTimeout(() => {
+                    mensagemEmail.style.display = "none";
+                }, 3000); // 7000 milissegundos = 7 segundos 
+                
+                
+            }
+            
+        }, 2000)
+
+
 
         frm.inName.value = ""
         frm.inName.focus()

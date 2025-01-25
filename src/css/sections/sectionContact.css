@@ -55,7 +55,7 @@
     background: transparent;
 }
 
-.content.contact > .content-formulario > input{
+.content.contact > .content-formulario > button{
     height: 48px;
     width: 240px;
     max-width: 80%;
@@ -68,9 +68,20 @@
     cursor: pointer;
     margin: 0 auto;
     font-weight: bold;
+    position: relative;
 }
 
-.content.contact > .content-formulario > input:hover{
+.content.contact > .content-formulario > button span{
+    color: var(--primary-color);
+    display: flex;
+    justify-content: center;
+}
+
+.content.contact > .content-formulario > button span:hover{
+    color: var(--secundary-color);
+}
+
+.content.contact > .content-formulario > button:hover{
     border: 2px solid var(--secundary-color);
     background-color: transparent;
     color: var(--secundary-color);
@@ -78,14 +89,24 @@
 
 .content.contact > .content-formulario #menssagem{
     padding: 10px;
-    border: 2px solid rgb(50, 116, 50);
+    border: 3px solid rgb(50, 116, 50);
     width: 400px;
     max-width: 100%;
     margin: 0 auto;
     border-radius: 8px;
-    color: rgb(50, 116, 50);
-    text-align: center;
+    justify-content: center;
+    gap: 20px;
     display: none;
+}
+
+.content.contact > .content-formulario #menssagem > p{
+    font-size: 18px;
+    font-weight: bold;
+    color:rgb(50, 116, 50) ;
+}
+.content.contact > .content-formulario #menssagem > img{
+    width: 16px;
+    height: 16px;
 }
 
 @media(max-width: 1100px){
