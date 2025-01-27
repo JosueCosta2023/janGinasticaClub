@@ -87,9 +87,8 @@
     color: var(--secundary-color);
 }
 
-.content.contact > .content-formulario #menssagem{
+.content.contact > .content-formulario #mensagem{
     padding: 10px;
-    border: 3px solid rgb(50, 116, 50);
     width: 400px;
     max-width: 100%;
     margin: 0 auto;
@@ -99,14 +98,23 @@
     display: none;
 }
 
-.content.contact > .content-formulario #menssagem > p{
+.content.contact > .content-formulario #mensagem > p{
     font-size: 18px;
     font-weight: bold;
-    color:rgb(50, 116, 50) ;
 }
-.content.contact > .content-formulario #menssagem > img{
+.content.contact > .content-formulario #mensagem > img{
     width: 16px;
     height: 16px;
+}
+
+.content.contact > .content-formulario #mensagem.success{
+    color: green;
+    border: 3px solid green;
+}
+
+.content.contact > .content-formulario #mensagem.error{
+    color: red;
+    border: 3ps solid red;
 }
 
 @media(max-width: 1100px){

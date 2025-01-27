@@ -7,6 +7,8 @@ window.addEventListener("load", () => {
 
     const enviar = document.querySelector("#btEnviar")
     const frm = document.querySelector("form")
+    const mensagemContent = frm.querySelector(".mensagem")
+    const mensagemSucesso = frm.querySelector(".msg")
 
     // Tempo de loading principal
     setTimeout(() => {
@@ -34,40 +36,46 @@ window.addEventListener("load", () => {
         menu.classList.toggle('open'); // Alterna a classe do menu
     });
 
-    const mensagemSucesso = frm.querySelector("#menssagem .msg")
 
-    mensagemSucesso.innerText = "Olá mundo"
+    const exibirMensagem  = (mensagem, tipo = "success") => {
+        mensagemContent.style.display = "flex";
+        mensagemContent.classList.add(tipo)
+        mensagemSucesso.textContent = mensagem
+
+        setTimeout(() => {
+            mensagemContent.style.display = "none"
+            mensagemContent.classList.remove(tipo)
+        }, 5000)
+    }
+
+    const limparFormulario = () => {
+        frm.inName.value = "";
+        frm.inEmail.value = "";
+        frm.inName.focus();
+    }
+
 
     // Evento para envio de formularios
-    enviar.addEventListener("click", () => {
+    enviar.addEventListener("click", (e) => {
 
-        const nome = frm.inName.value
-        const email = frm.inEmail.value
+        e.preventDefault()
 
+        const nome = frm.inName.value.trim()
+        const email = frm.inEmail.value.trim()
 
-        // Tempo de loading no botão enviar.
-        enviar.classList.toggle("loading");
+        if(!nome | !email){
+            exibirMensagem("Preencha todos os Campos Obrigatorios", "error")
+            return
+        }
+
+        enviar.classList.add("loading")
+
         setTimeout(() => {
-            if (nome || email) {
-                // Exibir a mensagem
-                enviar.classList.remove("loading")
+            enviar.classList.remove("loading")
+            exibirMensagem("Mensagem Enviada com Sucesso!", "success")
 
-                // Após 7 segundos, esconder a mensagem
-                setTimeout(() => {
-                    mensagemEmail.style.display = "none";
-                }, 3000); // 7000 milissegundos = 7 segundos 
-            } else {
-                mensagemSucesso.textContent = "Preencha os campos do Formulario corretamente."
-            }
-
+            limparFormulario()
         }, 2000)
-
-
-
-        // Limpeza de formulario pós envio
-        frm.inName.value = ""
-        frm.inName.focus()
-        frm.inEmail.value = ""
 
 
     })
