@@ -7,7 +7,7 @@ window.addEventListener("load", () => {
 
     const enviar = document.querySelector("#btEnviar")
     const frm = document.querySelector("form")
-    const mensagemContent = frm.querySelector(".mensagem")
+    const mensagemContent = frm.querySelector("#mensagem")
     const mensagemSucesso = frm.querySelector(".msg")
 
     // Tempo de loading principal
@@ -41,10 +41,11 @@ window.addEventListener("load", () => {
         mensagemContent.style.display = "flex";
         mensagemContent.classList.add(tipo)
         mensagemSucesso.textContent = mensagem
-
+        
         setTimeout(() => {
             mensagemContent.style.display = "none"
             mensagemContent.classList.remove(tipo)
+            frm.inName.focus();
         }, 5000)
     }
 
@@ -64,7 +65,7 @@ window.addEventListener("load", () => {
         const email = frm.inEmail.value.trim()
 
         if(!nome | !email){
-            exibirMensagem("Preencha todos os Campos Obrigatorios", "error")
+            exibirMensagem("Atenção, é obrigatorio preencher todos os campos do formulário.", "error")
             return
         }
 

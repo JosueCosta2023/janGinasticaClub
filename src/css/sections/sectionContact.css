@@ -89,7 +89,6 @@
 
 .content.contact > .content-formulario #mensagem{
     padding: 10px;
-    width: 400px;
     max-width: 100%;
     margin: 0 auto;
     border-radius: 8px;
@@ -98,23 +97,22 @@
     display: none;
 }
 
-.content.contact > .content-formulario #mensagem > p{
+.content.contact > .content-formulario #mensagem > span{
     font-size: 18px;
+    display: inline-block;
     font-weight: bold;
-}
-.content.contact > .content-formulario #mensagem > img{
-    width: 16px;
-    height: 16px;
+    letter-spacing: 2px;
 }
 
-.content.contact > .content-formulario #mensagem.success{
+
+.success{
     color: green;
     border: 3px solid green;
 }
 
-.content.contact > .content-formulario #mensagem.error{
+.error{
     color: red;
-    border: 3ps solid red;
+    border: 3px solid red;
 }
 
 @media(max-width: 1100px){
