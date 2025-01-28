@@ -61,7 +61,7 @@
   width: 70%;
   height: 100vh;
   z-index: 500;
-  background: #807f7fec;
+  background: #807f7fd4;
   color: white;
   display: flex;
   flex-direction: column;
@@ -92,10 +92,10 @@
   cursor: pointer;
   z-index: 1000;
   display: none;
-  border: 2px solid black;
-  border-radius: 100%;
+  /* border: 2px solid black; */
+  /* border-radius: 100%; */
   padding: 10px;
-  background-color: white;
+  /* background-color: rgba(255, 255, 255, 0.389); */
 }
 
 .hamburguer div {

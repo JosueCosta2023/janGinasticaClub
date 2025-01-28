@@ -9,6 +9,23 @@ window.addEventListener("load", () => {
     const frm = document.querySelector("form")
     const mensagemContent = frm.querySelector("#mensagem")
     const mensagemSucesso = frm.querySelector(".msg")
+    const btVoltarAoTopo = document.querySelector(".top-button")
+
+    window.onscroll = function(){
+        if(document.body.scrollTop > 20 || document.documentElement.scrollTop > 20){
+            btVoltarAoTopo.style.display = "flex"
+        } else {
+            btVoltarAoTopo.style.display = "none"
+        }
+    }
+
+    btVoltarAoTopo.onclick = function(){
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        })
+    }
+
 
     // Tempo de loading principal
     setTimeout(() => {
@@ -64,7 +81,7 @@ window.addEventListener("load", () => {
         const nome = frm.inName.value.trim()
         const email = frm.inEmail.value.trim()
 
-        if(!nome | !email){
+        if(!nome || !email){
             exibirMensagem("Atenção, é obrigatorio preencher todos os campos do formulário.", "error")
             return
         }

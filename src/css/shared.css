@@ -73,6 +73,7 @@ html, body {
   z-index: 999999;
   box-shadow: 0px 5px 5px 1px rgba(0, 0, 0, 0.432);
   cursor: pointer;
+  display: none;
 }
 
 button.loading .load {
