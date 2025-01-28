@@ -18,6 +18,7 @@ html, body {
   margin: 0 auto;
   flex-direction: column;
   gap: 20px;
+  position: relative;
 }
 
 .containerBlock > .content {
@@ -43,13 +44,6 @@ html, body {
   background-size: calc(100%/3) 50%;
   animation: l3 1s infinite linear;
 }
-@keyframes l3 {
-    20%{background-position:0%   0%, 50%  50%,100%  50%}
-    40%{background-position:0% 100%, 50%   0%,100%  50%}
-    60%{background-position:0%  50%, 50% 100%,100%   0%}
-    80%{background-position:0%  50%, 50%  50%,100% 100%}
-}
-
 /* Load button */
 
 .load{
@@ -66,12 +60,34 @@ html, body {
   display: none;
 }
 
+.top-button{
+  position: fixed;
+  bottom: 10px;
+  right: 20px;
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.274);
+  background-color: var(--secundary-color);
+  color: var(--primary-color);
+  font-weight: bold;
+  z-index: 999999;
+  box-shadow: 0px 5px 5px 1px rgba(0, 0, 0, 0.432);
+  cursor: pointer;
+}
+
 button.loading .load {
   display: block;
 }
 
 button.loading span {
   visibility: hidden;
+}
+
+@keyframes l3 {
+  20%{background-position:0%   0%, 50%  50%,100%  50%}
+  40%{background-position:0% 100%, 50%   0%,100%  50%}
+  60%{background-position:0%  50%, 50% 100%,100%   0%}
+  80%{background-position:0%  50%, 50%  50%,100% 100%}
 }
 
 @keyframes spin {
