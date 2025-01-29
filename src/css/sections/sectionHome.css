@@ -17,7 +17,7 @@
   position: absolute;
   background-image: 
         linear-gradient(to bottom, transparent, var(--primary-color)), 
-        url('/public/images/banner.webp');
+        url('../../../public/images/banner.webp');
   background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
